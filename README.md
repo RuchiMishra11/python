@@ -39,7 +39,7 @@ Topics covered:
 - Input using `input()`
 - Practice Questions
 
- 📌 [Day 01 Notes](Day1\Day01/note.md) | [Day 01 Code](Day1\Day01/example.py)
+ 📌 [Day 01 Notes](https://github.com/RuchiMishra11/python/wiki/Day1-notes#types-of-operators-in-python) | [Day 01 Code](Day1\Day01/example.py)
 
 ---
 
