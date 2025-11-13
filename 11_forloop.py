@@ -38,6 +38,9 @@ for x in (1,11):
           break
      else:
           print(x)
+#eg:7
+for ch in "apple":
+    print(ch)
 
 #chat gpt practice problem for "For loop ":
 # Problem 1: Print Squares
@@ -228,3 +231,66 @@ total=0
 for x in digit:
     total+=int(x)
 print(f"Sum of digit of the number {digit} is {total}")
+
+# for loop exercise no:1
+
+# 1. Count Consonants
+"""Ask the user for a word and count how many consonants (non-vowels, alphabet only) it contains."""
+word=input("Enter  a word: ").lower()
+consonant=['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
+count=0
+for letters in consonant:
+    count+=word.count(letters)
+print(f"The word you have entered has {count} consonants.")
+
+# Alternate way 
+word=input("Enter a word:  ").lower()
+vowel="aeiou"
+count=0
+for ch in word:
+    if ch.isalpha() and  ch  not in vowel:
+        count+=1
+print(f"The word you have entered has {count} consonants.")
+
+# 2. Print Word Pattern
+"""Ask the user for a word.
+Print it like this:
+If user enters "CODE
+C
+CO
+COD
+CODE"""
+word=input("Enter a word: ").upper()
+x=""
+for ch in word:
+    x+=ch
+    print(f"{x}")
+
+# 3. Sum of Odd Digits
+"""Ask the user for a number (as input).
+Use a loop to calculate the sum of only odd digits.
+Example: 34571 → 3+5+7+1 = 16"""
+num=input("Enter a number: ")
+count=0
+for x in num:
+    if int(x)%2!=0:
+        count+=int(x)
+
+print(f"The sum of the odd digit of the number you have entered is {count}.")
+
+# 4. Remove Spaces
+"""Ask the user for a sentence and create a new string with all spaces removed using a loop.
+Don't use .replace(" ", "") — do it manually with for."""
+
+sentence=input("Enter a  sentence: ")
+for words in sentence:
+    if words!=" ":
+        print(words,end="")
+
+# Alternate way
+sentence=input("Enter a  sentence: ")
+new_string=""
+for words in sentence:
+    if words!=" ":
+        new_string+=words
+print(f"New string without spaces:{new_string}")
