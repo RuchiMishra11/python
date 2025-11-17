@@ -294,3 +294,54 @@ for words in sentence:
     if words!=" ":
         new_string+=words
 print(f"New string without spaces:{new_string}")
+
+
+# 5. Letter Frequency Counter
+"""Ask the user for a word.
+Use a loop to print how many times each letter appears.
+Example:
+hello
+h → 1  
+e → 1  
+l → 2  
+o → 1"""
+word=input("Enter a word : ")
+done=""
+for ch in word:
+    if ch not in done:
+        print(f"{ch}  {word.count(ch)}")
+        done+=ch
+
+# 6. Print Each Character’s Index
+"""Ask the user for a word and print each character along with its index.
+Example:
+Enter word: cat
+c → 0
+a → 1
+t → 2"""
+word=input("Enter a word: ") 
+for ch in word:
+    print(f"{ch}-{word.index(ch)}")
+    
+
+
+# 7. Reverse Number
+"""Ask the user for a number and print it reversed using a for loop.
+Example: 1234 → 4321"""
+number=input("Enter a number: ")
+for x in reversed(number): 
+    print(x,end="")
+
+# 8. Print Pattern (1 to n)
+"""Ask the user for a number n.
+Print the following pattern using nested for loops:
+(for n = 4)
+1
+12
+123
+1234"""
+n=(input("Enter a number : "))
+count=""
+for x in  n: 
+    count+=x 
+    print(count)
