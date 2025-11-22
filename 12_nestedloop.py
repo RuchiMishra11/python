@@ -112,7 +112,7 @@ for i in range(1,10):
             print(i,j,"→",i*10+j)
 print()
      
-#12. Print all 2-digit numbers whose digits multiply to 
+#12. Print all 2-digit numbers whose digits multiply to 12
 for i in range(1,10):
     for j in range(0,10):
         if j*i==12:
@@ -128,3 +128,137 @@ for x in range(1,10):
         if y%2==0 and x%2!=0 and y+x<10:
             print(x,y,end="")
 print(x)
+
+
+#while - while nested loop 
+
+# 1. Print all pairs (i, j)
+# using for for  nested loop
+for x in range(1,4):
+    for y in range(1,3):
+        print((x,y))
+print()
+
+# using while while nested loop
+x=1
+while x<=3:
+    y=1
+    while y<=2:
+        print((x,y))
+        y+=1
+    x+=1
+
+# 2. Print a rectangle of 
+# using for-for nested loop
+row=3
+column=3
+symbole="*"
+for x in range(row) :
+    for y in range(column):
+        print(symbole,end=" ")
+    print()
+
+# using while-while nested loop:
+symbole="*"
+row=1
+while row<=3:
+    column=1
+    while column<=3:
+        print(symbole,end=" ")
+        column+=1
+    row+=1
+    print()
+
+# 3. Print numbers in a grid
+"""1 2 3
+   4 5 6
+   7 8 9"""
+
+# using for nested loop 
+num=1
+for x in  range(3):
+    for y in range(3):
+        print(num,end=" ")
+        num+=1
+    print()
+
+# using while nested loop 
+num=1
+row=1 
+while row<=3:
+    column=1
+    while column<=3:
+        print(num,end=" ")
+        column+=1
+        num+=1
+    print()
+    row+=1
+
+# 4. Print multiplication table (1 to 5)
+#using for nested loop :
+for x in range(1,6):
+   for y in range(1,11):
+      result=x*y
+      print(f"{x}x{y}={result}" )
+   print()
+
+# using while nested loop 
+i=1
+while i <=5:
+   j=1
+   while j<=10:
+      result=i*j
+      print(f"{i}x{j}={result}")
+      j+=1
+   print()
+   i+=1
+
+#  5. Print this pattern using while–while
+"""*
+   * *
+   * * *
+   * * * * """
+# using for nested loop 
+symbole="*"
+for i in range(1,5):
+    for j in range(i):
+        print(symbole,end=" ")
+    print()
+    
+# using while nested loop
+symbole="*"
+row=1
+while row<=4:
+    col=1
+    while col<=row:
+       print(symbole,end=" ")
+       col+=1
+    print()
+    row+=1
+
+
+# 6. Print reverse pattern
+"""
+* * * *
+* * *
+* *
+*"""
+# using for nested loop 
+symbole="*"
+for i in reversed(range(1,5)):
+    for j in range(i):
+        print(symbole, end=" ")
+    print()
+
+# using  while nested loop
+symbole="*"
+row=4
+while row>=1:
+    col=1
+    while col<=row:
+       print(symbole,end=" ")
+       col+=1
+    print()
+    row-=1
+
+
