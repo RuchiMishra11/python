@@ -261,4 +261,114 @@ while row>=1:
     print()
     row-=1
 
+# 7. Count how many pairs (i, j) satisfy i + j is even
+"""i → 1 to 5
+j → 1 to 5
+Print only the pairs where:
+(i + j) % 2 == 0"""
+#using for nested loop 
+for i in range(1,6):
+    for j in range(1,6):
+        if (i+j)%2==0:
+            print(f"{i}{j}", end=" " )
+    print()
+
+#using while nested loop 
+i=1
+while i<=5:
+    j=1
+    while j<=5:
+        if (i+j)%2==0:
+            print(f"{i}{j}", end=" ")
+        j+=1
+    print()
+    i+=1
+
+# 8. Print a number triangle
+"""For example:
+1
+1 2
+1 2 3
+1 2 3 4"""
+#using for nested loop
+for x in range(1,5):
+    for y in range(1,x+1):
+        print(y,end=" ")
+    print()
+
+#using while nested loop 
+x=1
+while x<=4:
+    y=1
+    while y<=x:
+        print(y, end =" ")
+        y+=1
+    print()
+    x+=1
+
+
+    # 9. Find the first pair (i, j) where i * j > 20
+"""i → 1 to 10
+j → 1 to 10
+Stop loops immediately when you find the first pair satisfying product > 20"""
+#using for nested loop
+found=False
+for i in range(1,11):
+    for j in range(1,11):
+        if i*j>20:
+            print(f"First pair:{i}{j}",end=" ")
+            found=True
+            break
+    if found:
+        break
+
+#using while nested loop
+found=False
+i=1
+while i<=10:
+    j=1
+    while j<=10:
+        if i*j>20:
+            print(f"First pair:{i}{j}",end=" ")
+            found=True
+            break
+        j+=1
+
+    if found:
+        break
+    print()
+    i+=1
+
+
+# 10. Print this pattern WITHOUT using string multiplication
+"""    *
+      ***
+     *****
+    *******"""
+#using for nested loop 
+row=4
+for i in range(1, row+1):
+    for j in range(row-i):
+        print(" ",end="")
+    for k in range(2*i - 1):
+        print("*",end="")
+    print()
+
+#using while nested loop
+row=4
+i=1
+while i<=row:
+
+    j=1
+    while j<=row-i:
+        print(" ",end="")
+        j+=1
+    k=1 
+
+    while k<=2*i-1:
+        print("*", end="")
+        k+=1
+
+    print()
+    i+=1
 
