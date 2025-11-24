@@ -586,3 +586,168 @@ while i<row:
     print()
     i+=1
   
+  # 1. Print numbers 1 to 3 three times
+"""1 2 3
+   1 2 3
+   1 2 3"""
+# using  for while nested loop 
+for i in range(1,4):
+   j=1
+   while j<=3:
+      print(j,end=" ")
+      j+=1
+   print()
+
+
+# 2. Print all pairs (i, j) where j runs until j < i
+""" example:
+1:
+2: 1
+3: 1 2
+4: 1 2 3"""
+# using  for while nested loop 
+for i in range(1,5):
+   print(f"{i}:",end="")
+   j=1
+   while j<i:
+      print(j,end=" ")
+      j+=1
+   print()
+
+# using  while for nested loop 
+i=1
+while i<=4:
+   print(f"{i}:",end="")
+   for j in range(1,i):
+      print(j,end=" ")
+   print()
+   i+=1
+
+#using while while  nested loop 
+i=1
+while i<=4:
+   print(f"{i}:",end="")
+
+   j=1
+   while j<i:
+      print(j, end=" ")
+      j+=1
+   print()
+   i+=1
+
+#using for for nested loop
+for x in range(1,5):
+   print(f"{x}:",end="")
+   for y in range(1,x):
+      print(y,end=" ")
+   print()
+
+# 3. Print even numbers ≤ i for each i in 1 to 10
+"""
+1:
+2: 2
+3: 2
+4: 2 4
+5: 2 4
+6: 2 4 6
+7: 2 4 6
+8: 2 4 6 8
+9: 2 4 6 8
+10: 2 4 6 8 10"""
+#using for-while nested loop
+for i in range(1,11):
+   print(f"{i}:",end="")
+   j=1
+   while j<=i:
+      if j%2==0:
+         print(j,end=" ")
+      j+=1
+   print()
+
+#using  while=for nested loop
+i=1
+while i<=10:
+   print(f"{i}:",end="")
+   for j in range(1,i+1):
+      if j%2==0:
+         print(j,end=" ")
+   print()
+   i+=1
+# 4. Generate this pattern using for–while
+"""1
+   12
+   123
+   1234"""
+#using for while nested loop
+for i in range(1,5):
+   j=1
+   while j<=i:
+      print(j,end="")
+      j+=1
+   print()
+
+# 5. Sum all (i*j) values where j runs only until j <= i+1
+#using for while nested loo
+total=0
+for i in range(1,4):
+   j=1
+   while j<=i+1:
+      total+=i*j
+      j+=1
+print(f"Total:{total}")
+
+#using while for nested loop
+total=0
+i=1
+while i<=3:
+   for j in range(1,i+2):
+      total+=i*j
+   i+=1
+print(f"Total:{total}")
+
+# 6. Find the first j such that j*j > 30 for each i
+"""Stop only inner loop for each i."""
+#using for while nested loop
+for i in range(1,6):
+    j=1
+    while True:
+        if j*j>30:
+            print(f"i={i}, first j={j}")
+            break
+        j+=1
+    
+#using while for nested loop:
+i=1
+while i<=6:
+    for j in range(1,7):
+        if j*j>30:
+            print(f"i={i}, first j={j}")
+            break
+    i+=1
+    print
+
+        
+
+# 7. Print this pattern using for–while
+"""*****
+   ****
+   ***
+   **
+   *"""
+#using for while nested loop
+for i in reversed(range(1,5)):
+    j=1
+    while j<=i:
+        print( "*",end="")
+        j+=1
+    print()
+
+#using while for nested loop:
+row=4
+while row>=1:
+    for col in range(row):
+        print("*",end="")
+    print()
+    row-=1
+
+
