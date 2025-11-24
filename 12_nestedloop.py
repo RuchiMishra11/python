@@ -372,3 +372,217 @@ while i<=row:
     print()
     i+=1
 
+# WHILE - FOR NESTED LOOP (exercise)
+
+# 1. Print this pattern  using while-for nested loop
+"""1 2 3
+   1 2 3
+   1 2 3"""
+# Using while-for nested loop 
+i=1
+num=1
+while i<=3:
+    for j in range(1,4):
+        print(j, end=" ")
+        
+    print()
+    i+=1
+    
+#using  for nested loop
+for i in range(3):
+    for j in  range(1,4):
+        print(j, end=" ")
+    print()
+
+#using while nested loop
+i=1
+while i<=3:
+    j=1
+    while j<=3:
+        print(j, end=" ")
+        j+=1
+
+    print()
+    i+=1
+
+# 3. Find first pair (i, j) where i+j > 6
+"""Stop both loops immediately."""
+#using while-for nested loop
+i=1
+found=False
+while i<=5:
+    for j in range(1,6):
+        if i+j>6:
+            print(f"First pair:{i}{j}")
+            found=True
+            break
+    if found:
+        break
+    print()
+    i+=1
+
+#using for for nested loop:
+found=False
+for i in range(1,6):
+    for j in range(1,6):
+        if i+j>6:
+            print(f"First pair: {i}{j}")
+            found=True
+            break
+    if found:
+        break
+    print()
+
+#using while while nested loop:
+found=False
+i=1
+while i<=5:
+    j=1
+    while j<=5:
+        if i+j>6:
+            print(f"First pair: {i}{j}")
+            found=True
+            break
+        j+=1
+    if found:
+        break
+    print()
+    i+=1
+
+# 4. Print stars in this pattern using while–for
+"""*
+   **
+   ***
+   ****"""
+#using while for nested loop:
+symbole="*"
+i=1
+while i<=4:
+    for j in range(i):
+        print(symbole, end="")
+    print()
+    i+=1
+
+#using for for nested loop
+symbole="*"
+for i in range(5):
+    for j in range(i):
+        print(symbole,end="")
+    print()
+
+#using while while nested loop
+symbole="*"
+i=1
+while i<=4:
+    j=1
+    while j<=i:
+        print(symbole, end="")
+        j+=1
+    
+    print()
+    i+=1
+
+# 5. Count how many pairs (i, j) have product < 10
+#using while for nested loop
+count=0
+i=1
+while i<=5:
+    for j in range(1,6):
+        if i*j<10:
+            count+=1
+            
+    i+=1
+print(f"Total pair:{count}")
+
+#using for for nested loop
+count=0
+for i in range(1,6):
+    for j in range(1,6):
+        if i*j<10:
+            count+=1
+    i+=1
+print(f"Total pairs:{count}")
+
+#using while while nested loop
+count=0
+i=1
+while i<=5:
+    j=1
+    while j<=5:
+        if i*j<10:
+            count+=1
+        j+=1
+    i+=1
+print(f"Total pairs:{count}")
+
+# 6. Print multiplication table (1 to 5) using while–for
+#using while-for nested loop
+i=1
+while i<=5:
+    for j in range(1,11):
+        print(f"{i}x{j}={i*j}")
+    print()
+    i+=1
+
+#using for-for nested loop
+for i in range(1,6):
+    for j in range(1,11):
+        print(f"{i}x{j}={i*j}")
+    print()
+    
+#using while-while nested loop
+i=1
+while i<=5:
+    j=1
+    while j<=10:
+        print(f"{i}x{j}={i*j}")
+        j+=1
+    print()
+    i+=1
+
+# 7. Print this pattern without using string multiplication
+"""   *
+      ***
+     *****
+    *******"""
+#using while for nested loop
+row=5
+i=1
+while i<row:
+    for j  in range(row-i):
+        print(" ",end="")
+    
+    for k in range(2*i-1):
+        print("*",end="")
+    
+    print()
+    i+=1
+
+#using for for nested loop
+row=4
+for i in range(1,row+1):
+    for j  in range(row-i):
+        print(" ",end="")
+    
+    for k in range(2*i-1):
+        print("*",end="")
+    
+    print()
+
+#using while for nested loop
+row=5
+i=1
+while i<row:
+    j=1
+    while j<=(row-i):
+        print(" ",end="")
+        j+=1
+    
+    k=1
+    while k<=(2*i-1):
+        print("*",end="")
+        k+=1
+    
+    print()
+    i+=1
+  
