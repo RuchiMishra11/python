@@ -63,7 +63,7 @@ cd python
  python 04_if_else.py
 
  
-🌱 What’s Coming Next
+##🌱 What’s Coming Next
 I will continue expanding this repository with:
 
 →Functions
@@ -75,18 +75,18 @@ I will continue expanding this repository with:
 →Mini Python projects
 →More practice problems
 
-✨ Why This Repo Exists
+##✨ Why This Repo Exists
 
 Because learning programming is not about speed — it’s about consistency.
 This repo helps me:
-## stay motivated
-## track my growth
-## experiment with new ideas
-## and build strong coding habits
-## Every commit is one step forward.
+ →stay motivated
+ →track my growth
+ →experiment with new ideas
+ →and build strong coding habits
+ →Every commit is one step forward.
 And I’m excited to see how far this journey goes. 🚀
 
-💙 Thank You
+##💙 Thank You
 
 Thank you so much for visiting my Python Learning Repository!
 Your time, interest, and support mean a lot.
