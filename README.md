@@ -1,55 +1,5 @@
-Your README is **really good**, but yes — a few things need fixing:
 
-Here are all the **issues** + the **corrected final version**.
-
----
-
-# ✅ **WHAT’S WRONG / NEEDS FIXING**
-
-### **1. Code Block is Broken**
-
-Your code block under **“How to Run the Code”** is opened but *never closed*.
-Also, you repeated the header **inside** the code block.
-
-### **2. Formatting Not Consistent**
-
-Some sections lack spacing, some emojis are stuck to the heading:
-
-❌ `##🌱 What’s Coming Next`
-✔️ `## 🌱 What’s Coming Next`
-
-### **3. File Table Missing 05 File**
-
-Your list jumps from **04 to 06**. If that’s intentional, it's fine.
-
-### **4. Arrow Lists Need Spacing**
-
-They should be:
-
-```
-→ Functions  
-→ Lists, tuples, dictionaries …
-```
-
-Not all merged.
-
-### **5. Missing horizontal lines in some sections**
-
-This breaks flow.
-
-### **6. Code example for running file should be inside code block**
-
-You mixed text inside the code block.
-
----
-
-# ✅ **FINAL PERFECTED README.md (Copy–Paste Ready)**
-
-Here is a **cleaned, polished, professional** and **creative** final version based on everything you wrote:
-
----
-
-# 🐍 Python Learning Journey
+ 🐍 Python Learning Journey
 
 Welcome to my Python learning repository!
 This repo documents my **daily progress** as I learn Python step-by-step — from the basics to deeper programming concepts.
@@ -83,22 +33,20 @@ I update this repo regularly as I continue exploring Python and solving new prob
 
 ## 📂 Contents Overview
 
-| File Name                     | Concept                                |
-| ----------------------------- | -------------------------------------- |
-| **01_variable.py**            | Variables & basic data storing         |
-| **02_input.py**               | Taking user input                      |
-| **03_arithmatic_operator.py** | Arithmetic operations                  |
-| **04_if_else.py**             | If–Else conditions                     |
-| **06_logical_operator.py**    | Logical operators (`and`, `or`, `not`) |
-| **07_string_method.py**       | String functions & methods             |
-| **08_indexing_slicing.py**    | Indexing & slicing                     |
-| **09_format_specifier.py**    | Print formatting                       |
-| **10_whileloop.py**           | While loops                            |
-| **11_forloop.py**             | For loop practice                      |
-| **12_nestedloop.py**          | Nested loops                           |
-| **… more coming soon!**       | I add new concepts as I learn          |
+| File Name                                                                                                | Concept                        |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| [01_variable.py](https://github.com/RuchiMishra11/python/blob/main/01_variable.py)                       | Variables, data storage basics |
+| [02_input.py](https://github.com/RuchiMishra11/python/blob/main/02_input.py)                             | Taking user input              |
+| [03_arithmatic_operator.py](https://github.com/RuchiMishra11/python/blob/main/03_arithmatic_operator.py) | Arithmetic operations          |
+| [04_if_else.py](https://github.com/RuchiMishra11/python/blob/main/04_if_else.py)                         | If-else statements             |
+| [06_logical_operator.py](https://github.com/RuchiMishra11/python/blob/main/06_logical_operator.py)       | Logical operators              |
+| [07_string_method.py](https://github.com/RuchiMishra11/python/blob/main/07_string_method.py)             | String methods                 |
+| [08_indexing_slicing.py](https://github.com/RuchiMishra11/python/blob/main/08_indexing_slicing.py)       | Indexing & slicing             |
+| [09_format_specifier.py](https://github.com/RuchiMishra11/python/blob/main/09_format_specifier.py)       | Format specifiers              |
+| [10_whileloop.py](https://github.com/RuchiMishra11/python/blob/main/10_whileloop.py)                     | While loop                     |
+| [11_forloop.py](https://github.com/RuchiMishra11/python/blob/main/11_forloop.py)                         | For loop                       |
+| [12_nestedloop.py](https://github.com/RuchiMishra11/python/blob/main/12_nestedloop.py)                   | Nested loops                   |
 
----
 
 ## 🛠 How to Run the Code
 
