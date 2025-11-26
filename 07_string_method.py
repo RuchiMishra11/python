@@ -1,3 +1,136 @@
+#String formating :
+# 1. STRING CONCATENATION  (+)
+greet="Hello"
+name="echii"
+result= greet+","+" "+"i am"+" "+name
+print(result)
+
+#PRACTICE PROBLEM 
+#1. Ask user for first name and last name → print full name using "+".
+first_name="echii"
+last_name="universe"
+result=first_name+" "+last_name
+print(result)
+
+#2.Take two strings "Python" and "Rocks" → print Python-Rocks using "+".
+a="Python"
+b="Rock"
+result=a+"-"+b
+print(result)
+
+#3.Ask user for a word and repeat it 3 times using only "+" (no *).
+word=input("Enter a word: ")
+result=word+" "+word+" "+word
+print(result)
+
+#4.Create a sentence: "My age is " and user's age (converted to string) → concatenate.
+name="Echii"
+age=18
+result="My name is "+name+"."+"I am "+str(age)+" "+"years old."
+print(result)
+
+#5.Input two numbers → print "Sum is X" using concatenation.
+first_num=int(input("Enter first number: "))
+second_num=int(input("Enter second number: "))
+sum= first_num+second_num
+result="Sum is "+ str(sum)
+print(result)
+
+#2..format() METHOD.
+print("i am {}! i am {} years old.".format("echii",18))
+
+# PRACTICE PROBLEM 
+# 1.Ask user for two numbers → print "{} + {} = {}" using .format().
+first_num=int(input("Enter first number: "))
+second_num=int(input("Enter second number: "))
+sum=first_num+second_num
+print("{}+{}={}".format(first_num,second_num,sum))
+
+#2.Format output:
+"Roll: 21, Name: John"
+print("Roll:{},Name:{}".format(21,"John"))
+
+#3.Ask temperature → print "Today's temperature is {}°C".
+tem=input("Enter temperature in celcium: ")
+print("Today's temperature is {}°C".format(tem))
+
+#4.Print a table row like: "Item: {}, Price: {} Rs".
+item=input("Enter the item's name: ")
+price=input("Enter the item's price: ")
+print("Item: {0},price:{1} Rs.".format(item, price))
+
+#5.Use keyword arguments:
+result="Name: {n}, Age: {a}".format(n="Sam", a=20)
+print(result)
+print("i like {a}. i want {b} {a}.".format(a="pizza",b=2))
+
+#3. PERCENTAGE FORMATTING(%)
+name="echii"
+age=18
+print("My name is %s.I am %d years old."%(name, age))
+
+#PRACTICE PROBLEMS
+#1.Print "X + Y = Z" using %d.
+first_num=int(input("Enter first number: "))
+second_num=int(input("Enter second number: "))
+sum=first_num+second_num
+print("%d+%d=%d"%(first_num,second_num,sum))
+
+#2.Print "Name: ___" using %s.
+print("Name: %s."%("echii"))
+
+#3.Print floating number with 2 decimals using %0.2f.
+print("%.2f"%(2.434))
+num1=float(input("Enter a number: "))
+num2=float(input("Enter a number: "))
+sum=num1+num2
+print("%.2f+%.2f=%.2f"%(num1,num2,sum))
+
+#4.Ask user for marks → print "Percentage: %.2f".
+marks=float(input("Enter a marks: "))
+total=float(input("Enter  the total marks: "))
+percentage=marks/total*100
+print("You have scored %.2f  marks out of %.2f so your percentage is %.2f ." %(marks, total ,percentage))
+
+#5.Display: "Item: %s, Quantity: %d".
+print("Item: %s, Quantity: %d"%("Pizza",3))
+
+words = ["I", "love", "Python"]
+print(" ".join(words))
+
+# 1.Ask user for 3 words → store in list → join with space.
+word1=input("Enter word1: ")
+word2=input("Enter word2: ")
+word3=input("Enter word3: ")
+words=[word1,word2,word3]
+print(" ".join(words))
+
+# 2.Join digits ["1","2","3","4"] into "1234".
+digits = ["1", "2", "3", "4"]
+result = "".join(digits)
+print(result)
+
+# 3.Join words with comma: "a,b,c,d".
+words = ["a", "b", "c", "d"]
+result = ",".join(words)
+print(result)
+
+# 4.Join characters of a string into "H-E-L-L-O".
+text = "HELLO"
+result = "-".join(text)
+print(result)
+
+# 5.Input a sentence → split into words → join using " | ".
+sentence = input("Enter a sentence: ")
+words = sentence.split()        # splits by spaces
+result = " | ".join(words)
+print(result)
+
+
+
+
+#STRING METHOD
+
 greet="hello world"
 phone_number="78-456-432"
  #length function : for checking the length of a variable it counts the number of character in  variable .
