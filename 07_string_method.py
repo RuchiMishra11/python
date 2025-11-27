@@ -1,5 +1,6 @@
 #String formating :
-# 1. STRING CONCATENATION  (+)
+# 1. STRING CONCATENATION  (+):
+"Example:"
 greet="Hello"
 name="echii"
 result= greet+","+" "+"i am"+" "+name
@@ -37,6 +38,7 @@ result="Sum is "+ str(sum)
 print(result)
 
 #2..format() METHOD.
+"Example:"
 print("i am {}! i am {} years old.".format("echii",18))
 
 # PRACTICE PROBLEM 
@@ -64,7 +66,8 @@ result="Name: {n}, Age: {a}".format(n="Sam", a=20)
 print(result)
 print("i like {a}. i want {b} {a}.".format(a="pizza",b=2))
 
-#3. PERCENTAGE FORMATTING(%)
+#3. PERCENTAGE FORMATTING(%):
+"Examples:"
 name="echii"
 age=18
 print("My name is %s.I am %d years old."%(name, age))
@@ -95,8 +98,15 @@ print("You have scored %.2f  marks out of %.2f so your percentage is %.2f ." %(m
 #5.Display: "Item: %s, Quantity: %d".
 print("Item: %s, Quantity: %d"%("Pizza",3))
 
+#4. " ".join(list/string):
+"examples:"
 words = ["I", "love", "Python"]
 print(" ".join(words))
+r=["miow","miow","miow","...."]
+print(" ".join(r))
+a="MIOW"
+print("-".join(a))
+
 
 # 1.Ask user for 3 words → store in list → join with space.
 word1=input("Enter word1: ")
@@ -126,7 +136,38 @@ words = sentence.split()        # splits by spaces
 result = " | ".join(words)
 print(result)
 
+#5.f-string METHOD:
+"Example:"
+name="Echii"
+age=17
+print(f"Hi! i am {name}.i am {age} years old.")
 
+#PRACTICE PROBLEMS:
+#1.Ask user’s name & city → print "Name: ___, City: ___" using f-string.
+name=input("Enter your name: ")
+city=input("Provide me with  your city name: ")
+print(f"Name: {name}, City:{city}")
+
+#2.Input a number → print Square: ___ using f-string.
+num=int(input("Enter a number: "))
+result=pow(num,2)
+print(f"Square: {result}")
+
+# 3.Format output as:
+"Value: 10, Double: 20, Triple: 30"
+num=int(input("Enter a number:"))
+double_num=2*num
+triple_num=3*num
+print(f"Value: {num}, Double: {double_num}, Triple: {triple_num} ")
+
+#4.Ask for 3 marks → print total and percentage using f-string.
+eng_marks=int(input("Enter how much marks you scored in English: "))
+maths_marks=int(input("Enter how much marks you scored in Mathematics: "))
+sci_marks=int(input("Enter how much marks you scored in Science: "))
+total=int(input("Enter the total marks : "))
+marks_scored=eng_marks+maths_marks+sci_marks
+percentage=marks_scored/total*100
+print(f"Your scored {percentage}% in your exam.")
 
 
 #STRING METHOD
