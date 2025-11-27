@@ -36,6 +36,184 @@ while not (date_of_birth >= 1 and date_of_birth<=31):
     date_of_birth=int(input("Enter your date of birth:"))
 print(f"you are born on {date_of_birth}")
 
+# GENERAL PATTERNS OF WHILE LOOPS
+"There are 3 main patterns you will use again and again while using 'while loop'."
+
+# Pattern 1 — VALIDATION WHILE LOOP
+
+"""value = input("Enter something: ")
+while value == "":        # condition for invalid input
+    print("Invalid! Please try again.")
+    value = input("Enter something: ")
+
+print("You entered:", value)"""
+
+"""Use when:
+ You must *force correct input
+ Keep asking until user enters valid data
+Validation happens **before allowing code to continue**"""
+
+### 5 Practice Problems (Validation Loop)
+
+#1.Ask age, but allow only 1–120
+"Keep asking until user enters a correct age."
+age=int(input("Enter your age: "))
+while not(age>=1 and age<=120):
+    print("You have not entered a valid age!")
+    age=int(input("Enter your age: "))
+print(f"okay! You are {age} years old.")
+
+#2. Ask for a positive number only
+"Reject zero and negative numbers."
+num=int(input("Enter a positive number: "))
+while not(num>0):
+    if num==0:
+        print("You have entered Zero.")
+    elif num<0:
+        print("You have entered a negative number.")
+    num=int(input("Enter a positive number only: "))
+print(f"You have entered {num}")
+
+#3. Ask for a password at least 6 characters
+"If less than 6, ask again."
+password=input("Enter your password: ")
+while not(len(password)>=6):
+    print("The password you have entered is not valid.")
+    password=input("Enter your password again: ")
+print("welcome!")
+
+#4. Ask for a non-empty sentence
+"User must enter something containing at least 1 non-space character."
+sentence=input("Enter a  no-empty sentence: ")
+while not any( ch.isalnum() for ch in sentence):
+    print("YOU have entered a empty string.")
+    sentence=input("Enter a  no-empty sentence: ")
+print(f"Sentence you have Entered is '{sentence}.'")
+
+#5. Ask for marks (0–100 only)
+"If user enters marks outside this range, ask again."
+marks=int(input("Enter your marks: "))
+while not(marks>=0 and  marks<=100):
+    print("You have not entered marks within the range 0-100.")
+    marks=int(input("Enter your marks: "))
+print(f"You have scored {marks}.")
+     
+
+
+# Pattern 2 — COUNTING LOOP (while loop that runs FIXED number of times)
+"""i = 1
+while i <= 10:            # loop runs a fixed number of times
+    print("Count:", i)
+    i += 1"""
+
+
+
+"""Use when:
+You know EXACT number of repetitions
+Example: print table 10 times, run loop 5 times, count until N"""
+
+#5 Practice Problems (Counting Loop)
+
+#1.Print numbers 1 to 20 using while loop
+i=1
+while i<=20:
+    print(i, end=" ")
+    i+=1
+
+#2.Print even numbers from 2 to 50
+i=1
+while i<=50:
+    if i%2==0:
+        print(i,end=" ")
+    i+=1
+
+#3.Take a number N → print its multiplication table up to 10
+num=int(input("Enter a numbere: "))
+i=1
+while i<=10:
+    print(f"{num}x{i}={num*i}")
+    i+=1
+
+
+#4.Print squares of numbers from 1–15
+i=1
+while i<=15:
+    print(f"{i}²={pow(i,2)}")
+    i+=1
+
+
+#5. Ask user for 5 numbers and print their sum
+"Loop runs **exactly 5 times**, not more / not less."
+total=0
+count=1
+while count<=5:
+    num=int(input("Enter a number:"))
+    total+=num
+    count+=1
+print(f"Sum of the all number is :{total}")
+
+#Pattern 3 — SENTINEL LOOP (run UNTIL condition met)
+"""while True:               # infinite loop
+    text = input("Enter something (type 'stop' to exit): ")
+    if text.lower() == "stop":   # sentinel condition
+        break
+    print("You typed:", text)"""
+
+"""Use when:
+1. You do NOT know how many times loop will run
+2.Loop ends only when a STOP value appears
+3.Example: keep entering numbers until user enters 0"""
+
+# 5 Practice Problems (Sentinel Loop):
+#1. Keep taking numbers until user enters 0 → print sum of all
+"Stop only when sentinel (`0`) arrives."
+num=int(input("Enter a number:"))
+total=0
+while True:
+    if num==0:
+        break
+    total+=num
+    num=int(input("Enter a number again:  "))
+print(f"Sum of the number you have entered is {total}")
+
+    
+#2. Keep taking input until user types “stop” (case insensitive)
+text=input("Enter something: ")
+while True:
+    if text=="stop":
+        break
+    text=input("Enter something: ")
+print("Okay!")
+
+#3. Keep reading marks until user enters a negative number → print average
+total=0
+count=0
+marks=int(input("Enter your marks: "))
+while True:
+    if marks<0:
+        break
+    total+=marks 
+    count+=1
+    marks=int(input("Enter your marks: "))
+print(f"Average={total/count}")
+
+#4. Keep asking for names until user enters “end” → print all names
+name=input("Enter your name: ")
+total=""
+while True:
+    if name=="end":
+        break
+    total+=name+" "
+    name=input("Enter your name: ")
+print(f"The names you have entered : {total}")
+
+#5.Keep asking numbers until user enters number > 100
+"As soon as number > 100 appears → stop."
+num=int(input("Enter a number: "))
+while True:
+    if num>100:
+        break
+    num=int(input("Enter a number: "))
 
 # chat gpt practice problems:
 # Problem 1 (New): Username Without Spaces
@@ -75,7 +253,6 @@ if validation=="y":
         print("Continuing.....")
 elif validation=="n":
         print("Exiting...")
-
 
 
 # Problem 4: Password with Conditions
