@@ -39,6 +39,7 @@ I update this repo regularly as I continue exploring Python and solving new prob
 | [02_input.py](https://github.com/RuchiMishra11/python/blob/main/02_input.py)                             | Taking user input              |
 | [03_arithmatic_operator.py](https://github.com/RuchiMishra11/python/blob/main/03_arithmatic_operator.py) | Arithmetic operations          |
 | [04_if_else.py](https://github.com/RuchiMishra11/python/blob/main/04_if_else.py)                         | If-else statements             |
+| [05_list_set_tuples.py](https://github.com/RuchiMishra11/python/blob/main/05_list_set_tuples.py)       | list set tuples            |
 | [06_logical_operator.py](https://github.com/RuchiMishra11/python/blob/main/06_logical_operator.py)       | Logical operators              |
 | [07_string_method.py](https://github.com/RuchiMishra11/python/blob/main/07_string_method.py)             | String methods                 |
 | [08_indexing_slicing.py](https://github.com/RuchiMishra11/python/blob/main/08_indexing_slicing.py)       | Indexing & slicing             |
