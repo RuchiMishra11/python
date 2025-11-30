@@ -129,5 +129,45 @@ for i in range(b):
             a[j],a[j+1]=a[j+1],a[j]
 print(a)
 
+#   Set   = {} unordered and immutable, but Add/Remove OK. NO duplicates
+set={1,2,3}
+"add():add a new element to the set"
+set.add(4)
+print(set)
+"update() — Add multiple elements takes a list, tuple, set… anything iterable."
+set.update({5,6},[7,8])
+print(set) #{1,2,3,4,5,6,7,8}
+"remove() — removes item but errors if not founds"
+set.remove(7)
+print(set) #{1,2,3,4,5,6,8}
+"discard() — removes item but NO error if item not found"
+set.discard(8)
+print(set)
+set.discard(9)
+print(set)
+"pop() — removes a random item"
+set.pop()
+print(set)
+"len()- count the number element of set"
+print(len(set))
+# MATHEMATICAL SET OPERATIONS
+"union() — join two sets (no duplicates)"
+x={1,3,4}
+y={2,4,3}
+print(x.union(y))  #{1, 2, 3, 4}
+"intersection() — common elements"
+print(x.intersection(y)) #{3, 4}
+"difference() — elements present in A but not in B"
+print(x.difference(y)) #{1}
+"symmetric_difference() Elements NOT common in both sets(everything except intersection)"
+print(x.symmetric_difference(y))  #{1, 2}
+"issubset() / issuperset(): "
+a = {1, 2}
+b = {1, 2, 3}
+print(a.issubset(b))#True
+print(a.issuperset(b)) #False
+print(b.issuperset(a)) #True
+
+
 
 
