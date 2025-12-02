@@ -278,16 +278,77 @@ for i in s:
         a.add(i)
 print(a)
 
-
-
-
-
-
-
-
-
-
 #   Tuple = () ordered and unchangeable. Duplicates OK. FASTER
+a=(1,3,2,4)
+#SOME METHOD OF TUPLES
+print(a.index(3))
+print(a.count(4))
+
+# OTHER IMPORTANT TUPLE FEATURES (not the methods)
+"1.Accessing items (indexing):"
+A=(1,23,4,5,4,3)
+print(A[-1])
+print(A[1])
+print(A[3])
+
+"2. Slicing:"
+A=(1,23,4,5,4,3)
+print(A[:4])
+print(A[:2])
+print(A[1:5])
+
+"3. Concatenation: "
+a=(1,24,4,3,4,3)
+b=(12,3,4,34,3)
+print(a+b)
+
+"4. Repetition"
+a=(5,)
+print(a*3)
+b=(1,2,3,4)
+print(b*2)
+
+"5. Membership check (in)"
+t=(1,3,4)
+print(1 in t) #True
+print(3 in t) #True
+print(6 in t) #False
+print(2 in t) #False
+
+"6. Length of tuple"
+x=(1,3,4,3)
+print(len(x))
+
+"7. Tuple unpacking"
+t=(1,2,3)
+a,b,c=t
+print(a,b,c)
+
+"8. Nested tuples"
+t = (1, (2, 3), 4)
+print(t[1][0])   # 2
+a=(1,2,(3,4),9,"hello")
+print(a[2][1])
+print(a[4][2])
+print(a[4][4])
+print(a[4][1])
+
+"9. Converting tuple → list (to modify)"
+t={1,2,3}
+l=list(t)
+l.append(4)
+t=tuple(l)
+print(t)
+
+
+
+
+
+
+
+
+
+
 
 
 
