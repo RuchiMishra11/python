@@ -167,7 +167,127 @@ b = {1, 2, 3}
 print(a.issubset(b))#True
 print(a.issuperset(b)) #False
 print(b.issuperset(a)) #True
+"isdisjoint():check whether two sets are disjoint or not "
+a={5,6}
+b={1,2,3,4}
+print(a.isdisjoint(b))#True
 
+#PRACTICE PROBLEMS 
+# 1. Remove duplicates from a list using a set.
+"""Input:
+[1,2,3,2,4,1,5]
+Output:
+[1,2,3,4,5]""" 
+
+
+# 2. Find common elements between two lists using sets.
+"""Input:
+List1 = [1,2,3,4]
+List2 = [3,4,5,6]"""
+
+# 3. Check if a list has all unique elements (use set).
+# 4. Given two sets, find elements in A that are not in B.
+# 5. Count unique words in a sentence using a set.
+"""Example:
+"apple orange apple banana orange" """
+
+# 6. Convert a string into a set of characters.
+# 7. Given two sets, check if one is subset of the other.
+# 8. Create a set from user input values until user types 'stop'.
+# 9. Find the symmetric difference between two lists.
+# 10. Remove all items from a set except even numbers.
+
+#PRACTICE PROBLEMS 
+# 1. Remove duplicates from a list using a set.
+"""Input:
+[1,2,3,2,4,1,5]
+Output:
+[1,2,3,4,5]""" 
+a=set()
+a.update([1,2,3,2,4,1,5])
+print(a)
+
+# 2. Find common elements between two lists using sets.
+"""Input:
+List1 = [1,2,3,4]
+List2 = [3,4,5,6]"""
+List1 = [1,2,3,4]
+List2 = [3,4,5,6]
+a=set()
+b=set()
+a.update(List1)
+b.update(List2)
+print(a.intersection(b))
+
+# 3. Check if a list has all unique elements (use set).
+x=[1,2,3,2,4,1,5] 
+if len(x)==len(set(x)):
+    print("All unique!")
+else:
+    print("Not unique!")
+
+
+# 4. Given two sets, find elements in A that are not in B.
+A={1,3,4,5}
+B={3,2,4,2}
+print(A.difference(B))
+
+# 5. Count unique words in a sentence using a set.
+"""Example:
+"apple orange apple banana orange" """
+sentence=input("Enter a sentence: ")
+word=sentence.split()
+unique_word=set(word)
+print(f"""unique words count: {len(unique_word)}.
+          unique words:{unique_word}""")
+
+# 6. Convert a string into a set of characters.
+a="miow"
+print(set(a))
+# 7. Given two sets, check if one is subset of the other.
+a={1,2}
+b={1,35,2,5,2}
+print(a.issubset(b)) #True
+print(a.issuperset(b))  #False
+print(b.issuperset(a)) #True
+
+# 8. Create a set from user input values until user types 'stop'.
+
+s=set()
+while True:
+    element=input("Enter the element of set: ")
+    if element.lower()=="stop":
+        break
+    s.add(element)
+    
+print(s)
+
+# 9. Find the symmetric difference between two lists.
+List1 = [1,2,3,4]
+List2 = [3,4,5,6]
+a=set(List1)
+b=set(List2)
+print(a.symmetric_difference(b))
+print(b.symmetric_difference(a))
+
+# 10. Remove all items from a set except even numbers.
+a=set()
+s={1,2,3,4,5,6,7,8,9 ,10}
+for i in s:
+    if i%2==0:
+        a.add(i)
+print(a)
+
+
+
+
+
+
+
+
+
+
+#   Tuple = () ordered and unchangeable. Duplicates OK. FASTER
 
 
 
