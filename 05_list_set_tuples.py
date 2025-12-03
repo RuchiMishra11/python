@@ -340,6 +340,79 @@ l.append(4)
 t=tuple(l)
 print(t)
 
+#PRACTICE PROBLEM
+# 1. Count how many times an item appears in a tuple
+"""Input: (1,2,3,2,4,2,5)
+Output: 2 appears 3 times"""
+tup=tuple(input("Enter anything with spaces: ").split())
+item=input("Enter item that you need to count in tuple: ")
+print(f"Item {item} appears {tup.count(item)} times.")
+
+
+# 2. Find the index of a value in a tuple
+"""Input: (10,20,30,10,40)
+Find index of 10"""
+tup=tuple(input("Enter anything with spaces: ").split())
+item=input("Enter item whose index you wanna find : ")
+print(f"Item {item} index is  {tup.index(item)} .")
+if tup.count(item)>1:
+    last_index=len(tup) -1 - tup[::-1].index(item)
+    print(f"And the last index of {item} is {last_index}")
+ 
+# 3. Create a tuple from user inputs until they type stop
+list=[]
+while True:
+    a=input("Enter  something: " )
+    if a.lower()=="stop":
+        break
+    list.append(a)
+t=tuple(list)  
+print(t)
+
+# 4. Check if a tuple contains a given element
+tup=tuple(input("Enter something with spaces: ").split())
+item=input("Enter the item  you wanna search in the tuple: ")
+if item in tup:
+    print("Found!")
+else:
+    print("Not Found!")
+
+# 5. Reverse a tuple using slicing
+"Output: (5,4,3,2,1) → (1,2,3,4,5)"
+tup=(5,4,3,2,1)
+reversed_tup=tup[::-1]
+print(reversed_tup)
+
+# 6. Concatenate two tuples and print the result
+a=(1,2,3,4)
+b=(5,6,7,8,9)
+c=a+b
+print(c)
+# 7. Convert a list into a tuple
+l=[1 ,3,4,4]
+t=tuple(l)
+print(t)
+
+# 8. Convert a tuple into a list and add a new element
+t=(1,2,3)
+l=list(t)
+l.append(4)
+t=tuple(l)
+print(t)
+
+# 9. Given a tuple, print all even numbers from the tuple
+tup=(1,2,3,4,5,6,7,8,9,10)
+for i in tup:
+    if i%2==0:
+        print(i,end=",")
+print()
+
+# 10. Unpack a tuple of 3 elements into 3 variables
+tup=(1,2,3)
+a,b,c=tup
+print(a,b,c)
+
+
 
 
 
