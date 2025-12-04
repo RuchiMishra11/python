@@ -412,6 +412,190 @@ tup=(1,2,3)
 a,b,c=tup
 print(a,b,c)
 
+#2D COLLECTION :A collection inside another collection.
+"we can use the method of the collection which are used to create a 2d list for a given 2d collection"
+
+# Here are a few different 2d collection combinations:
+
+#printing 2D number pad using 2D collections:
+# 2D list of lists
+num_pad = [[1, 2, 3],
+           [4, 5, 6],
+           [7, 8, 9],
+           ["*", 0, "#"]]
+print(num_pad)
+
+# 2D list of tuples
+num_pad = [(1, 2, 3),
+           (4, 5, 6),
+           (7, 8, 9),
+           ("*", 0, "#")]
+print(num_pad)
+           
+# 2D list of sets(unordered )
+"""num_pad = [{1, 2, 3},
+           {4, 5, 6},
+           {7, 8, 9},
+           {"*", 0, "#"}]
+   print(num_pad)"""
+
+# 2D tuple of lists
+num_pad = ([1, 2, 3],
+           [4, 5, 6],
+           [7, 8, 9],
+           ["*", 0, "#"])
+print(num_pad)
+
+
+# 2D tuple of tuples
+num_pad = ((1, 2, 3),
+           (4, 5, 6),
+           (7, 8, 9),
+           ("*", 0, "#"))
+print(num_pad)
+# 2D tuple of sets (unordered sets inside the collection)
+"""num_pad = ({1, 2, 3},
+           {4, 5, 6},
+           {7, 8, 9},
+           {"*", 0, "#"})
+   print(num_pad)"""
+
+# 2D set of lists (NOT VALID)
+# num_pad = {[1, 2, 3],
+#            [4, 5, 6],
+#            [7, 8, 9],
+#            ["*", 0, "#"]}
+# print(num_pad)
+
+# 2D set of tuples (unordered)
+"""num_pad = {(1, 2, 3),
+           (4, 5, 6),
+           (7, 8, 9),
+           ("*", 0, "#")}
+    print(num_pad)"""
+
+# # 2D set of sets (NOT VALID)
+# num_pad = {{1, 2, 3},
+#            {4, 5, 6},
+#            {7, 8, 9},
+#            {"*", 0, "#"}}
+# print(num_pad)
+
+for row in num_pad:
+    for num in row:
+        print(num, end=" ")
+    print()
+
+# 1. Create a 2D list of 3 students with 2 marks each
+student_info=[("mimi",2),
+              ("sid" ,2 ),
+              ("dev",2)]
+for row in student_info:
+    for info in row:
+        print(info,end=" ")
+    print()
+
+# 2. Print all elements in a 2D list
+l=[(1,2,3),
+   (4,5,6),
+   (7,8,9)]
+for row in l:
+    for i in row:
+        print(i ,end=" ")
+
+    
+# 3. Find the sum of all numbers in a 2D list
+total=0
+l=[(1,2,3),
+   (4,5,6),
+   (7,8,9)]
+for row in l:
+    for i in row:
+        total+=i
+print()
+print(total)
+
+
+# 4. Count total elements in a 2D list
+count=0
+l=[(1,2,3),
+   (4,5,6),
+   (7,8,9)]
+for row in l:
+    for i in row:
+        count+=1
+print(count)
+
+# 5. Find the largest number in a 2D list
+l=[(1,2,3),
+   (4,5,6),
+   (7,8,9)]
+largest_num=l[0][0]
+for row in l:
+    for i in row:
+        if i>largest_num:
+            largest_num=i
+print(f"Largest number: {i}")
+
+# 6. Transpose a 2D list (rows → columns)
+l=[(1,2,3,4),
+   (5,6,7,8)]
+transpose=list(zip(*l))
+
+for i in transpose:
+    print(f"{i},")
+
+# 7.Find the sum of each row
+row1=0
+row2=0
+l=[(1,2,3,4),
+   (5,6,7,8)]
+for i in range(len(l)):
+    print(f"Row{i+1} → {sum(l[i])}")
+
+# 8. Print only even numbers from a 2D list
+l=[(1,2,3),
+   (4,5,6),
+   (7,8,9)]
+for row in l:
+    for i in row:
+        if i%2==0:
+           print(i,end=" ")
+print()   
+
+# 9. Check if a number exists in a 2D list
+l=[(1,2,3),
+   (4,5,6),
+   (7,8,9)]
+
+num=int(input("Enter the number you wanna check in: "))
+found=False
+for row in l:
+    for i in row:
+        if i==num:
+            found=True
+            break
+if found:
+    print(f"{num} is there in list.")
+else:
+    print(f"{num} is not  there in list.")
+
+
+
+# 10. Flatten a 2D list into a 1D list
+l=[(1,2,3),
+   (4,5,6),
+   (7,8,9)]
+l1=[]
+for row in l:
+    for i in row:
+        l1.append(i)
+print(l1)
+
+
+
+
+
 
 
 
