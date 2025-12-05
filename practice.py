@@ -111,3 +111,46 @@ print()
 
 score = int(score / len(questions) * 100)
 print(f"Your score is: {score}%") 
+
+questions=("1.Largest planet in our galaxy?",
+          "2.Largest country in the world?",
+          "3.Longest river in the world?",
+          "4.Longet moutain in the world?")
+options=(("A.Earth", "B.Mars", "C.Jupiter", "D.Saturn"),
+         ("A.China", "B.USA", "C.Russia", "D.India"),
+         ("A.Amazon", "B.Nile", "C.Ganga", "D.Yangtze"),
+         ("A.Everest", "B.K2", "C.Andes", "D.Alps"))
+answers=("C","C","A","C")
+guesses=[]
+score=0
+question_num=0
+for question in questions:
+    print("------------------------")
+    print(question)
+
+    for option in options[question_num]:
+        print(option)
+    
+    guess=input("Enter your answer(A,B,C,D):").upper()
+    guesses.append(guess)
+    if guess==answers[question_num]:
+        score+=1
+    else:
+        print(f"{answers[question_num]} is the correct answer.")
+    question_num+=1
+
+print("-----------------------")
+print("        RESULT         ")
+print("-----------------------")
+print("Answers: ")
+for answer in answers:
+    print(answer,end=" ")
+print()
+
+print("Your guesses: ")
+for guess in guesses:
+    print(guess,end=" ")
+print()
+
+your_score=int(score/len(questions)*100)
+print(f"You have scored {your_score}%")
