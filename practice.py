@@ -35,3 +35,29 @@ for i in range(len(items)):
 print("-------------------------------------")
 print("{:<20} {:>10.2f}".format("TOTAL", total))
 print("-------------------------------------")
+
+
+# PROJECT: STUDENT RESULT SYSTEM
+"""Features:
+Take multiple students
+Store marks in 2D list
+Display formatted result
+Calculate total & average"""
+student_info=[]
+n=int(input("Enter number of students: "))
+for i in range(n):
+    name=input("Enter student name: ")
+    English=int(input("Enter the marks scored in English: "))
+    Mathematics=int(input("Enter the marks scored in Mathematics: "))
+    science=int(input("Enter the marks scored in Science: "))
+    student_info.append([name,English,Mathematics,science])
+print("/n----------Student information----------")
+print("{:<5} {:<8} {:<8} {:<12} {:<7}".format("Name","English","Mathematics","Science","Total"))
+print("-----------------------------------------")
+
+    
+for s in student_info:
+    total=s[1]+s[2]+s[3]
+    print("{:<5} {:<8} {:<8} {:<12} {:<7}".format(s[0],s[1],s[2],s[3],total))
+
+
