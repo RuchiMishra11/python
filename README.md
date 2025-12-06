@@ -49,6 +49,8 @@ I update this repo regularly as I continue exploring Python and solving new prob
 | [12_nestedloop.py](https://github.com/RuchiMishra11/python/blob/main/12_nestedloop.py)                   | Nested loops                   |
 | [practice.py](https://github.com/RuchiMishra11/python/blob/main/practice.py)                             | Some basic programs
  |
+| [13_dictionary.py](https://github.com/RuchiMishra11/python/blob/main/13_dictionary.py)                   | Dictionary 
+  |
 
 ## 🛠 How to Run the Code
 
