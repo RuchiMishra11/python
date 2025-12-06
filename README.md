@@ -47,10 +47,11 @@ I update this repo regularly as I continue exploring Python and solving new prob
 | [10_whileloop.py](https://github.com/RuchiMishra11/python/blob/main/10_whileloop.py)                     | While loop                     |
 | [11_forloop.py](https://github.com/RuchiMishra11/python/blob/main/11_forloop.py)                         | For loop                       |
 | [12_nestedloop.py](https://github.com/RuchiMishra11/python/blob/main/12_nestedloop.py)                   | Nested loops                   |
+| [13_dictionary.py](https://github.com/RuchiMishra11/python/blob/main/13_dictionary.py)                   | Dictionary 
+   |
 | [practice.py](https://github.com/RuchiMishra11/python/blob/main/practice.py)                             | Some basic programs
  |
-| [13_dictionary.py](https://github.com/RuchiMishra11/python/blob/main/13_dictionary.py)                   | Dictionary 
-  |
+
 
 ## 🛠 How to Run the Code
 
