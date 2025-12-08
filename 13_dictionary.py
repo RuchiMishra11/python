@@ -66,3 +66,85 @@ print(capitals)
 "10.clear()→ Delete everything"
 capitals.clear()
 print(capitals)
+
+#ADD/UPDATE/DELETE
+d = {"a": 10, "b": 20}
+d["c"] = 30
+d["a"] = 100
+del d["b"]
+print(d)
+
+#PRACTICE PROBLEMS
+
+
+# 1.Create a dictionary with 5 student names and marks.
+student_info={"Rahul":"56",
+              "Riya":"67",
+              "kiki":"87",
+              "Anita":"78"}
+for students,marks in student_info.items():
+    print(f"{students:<2}  → {marks:<2}")
+
+# 2.Print only the keys.
+
+for keys in student_info.keys():
+    print(keys)
+
+# 3.Print only the values.
+for values in student_info.values():
+    print(values)
+
+# 4.Update a student’s marks.
+student_info.update({"Rahul":"78"})
+print(student_info)
+
+# 5.Check if a key exists in a dictionary.
+key=input("Enter what you wanna search in the dictionary: ")
+if student_info.get("miow"):
+    print("Exits")
+else:
+    print("Doesn't exits.")
+
+# 6.Count frequency of each character in a string.
+s=input("Enter a word: ")
+freq={}
+for ch in s:
+    if ch in freq:
+        freq[ch]+=1
+    else:
+        freq[ch]=1
+print(freq)
+
+# 7. Count frequency of words in a sentence.
+sentence=input("Enter a sentence: ")
+words=sentence.split()
+freq={}
+for word in  words:
+    if word in freq:
+        freq[word]+=1
+    else:
+        freq[word]=1
+print(freq)
+
+# 8.Merge two dictionaries.
+a={"Dev":"23","Ruhi":"19"}
+b={"sid":"20","Piya":"21"}
+a.update(b)
+print(a)
+print("{:<5}  {:<5}".format("Name","Age"))
+for x,y in a.items():
+    print(f"{x:<5} → {y:<5}")
+
+# 9.Find the key with maximum value.
+d={"a":"12","b":"16","c":"23"}
+x= max(d,key=d.get)
+print(f"Key with maximum value:{x}.")
+
+# 10.Delete all keys with value = 0.
+d={"a":"12","b":"16","c":"23","d":"0"}
+for key in list(d.keys()):
+    if d[key]=="0":
+        del d[key]
+
+print(d)
+
