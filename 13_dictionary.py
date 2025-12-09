@@ -148,3 +148,61 @@ for key in list(d.keys()):
 
 print(d)
 
+#COMPREHENSION exercise
+
+# 1.Create {1:1, 2:4, 3:9, ..., 10:100} using comprehension.
+d={i:i*i for i in range(1,10) }
+print(d)
+
+# 2.convert a list of words into dictionary → key=word, value=length.
+l=["miow","bow"]
+d={k:len(k) for k in l}
+print(d)
+
+# 3.Convert a string into a dictionary counting each character.
+string=input("Enter a word: ")
+d={k:string.count(k)for k in string}
+print(d)
+
+# 4.Reverse key–value pairs in a dictionary.
+d = {"a": 1, "b": 2, "c": 3}
+reversed_dic={value:key for key,value in d.items()}
+print(reversed_dic)
+
+# 5.Filter out all items where value is less than 50.
+scores = {"A": 80, "B": 45, "C": 30, "D": 95}
+filtered_score={k:v for k  , v in scores.items()if v<50}
+print(filtered_score)
+#score where value is greater than 50
+new_score={k:v for k,v in scores.items()if v>50}
+print(new_score)
+
+# 6.Convert two lists into a dictionary using comprehension.
+a=[1,2,3]
+b=[4,5,6]
+d={k:v for k,v in zip(a,b)}
+print(d)
+
+# 7.Given: {"a":2,"b":5,"c":10} → make a dict where each value is squared.
+d={"a":2,"b":5,"c":10}
+new_d={k:v**2 for k , v in d.items()}
+print(new_d)
+
+# 8.Make a dictionary of vowels and their count in a string.
+word=input("Enter a word: ")
+vowel="aeiou"
+d={v:word.count(v) for v in vowel if v in word }
+print(d)
+
+# 9.Create a dictionary where keys = words and values = frequency of words.
+fruit=["apple","banna","mango","apple","mango","orange"]
+d={v:fruit.count(v) for v in fruit}
+print(d)
+
+# 10.Given a 2D list of student marks, create a dictionary of student name → total marks.
+l_2d=[["Riya",25,45],
+      ["Sid",24,26],
+      ["kira",20,35]]
+
+d={v[0]:sum(v[1:] )for v in l_2d}
+print(d)
