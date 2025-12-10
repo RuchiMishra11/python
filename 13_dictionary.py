@@ -206,3 +206,117 @@ l_2d=[["Riya",25,45],
 
 d={v[0]:sum(v[1:] )for v in l_2d}
 print(d)
+
+# exercise:2
+# 1 Create a dictionary from 1 to 20 where key = number, value = “even” or “odd”.
+d={v:("even"if v%2==0 else "odd") for v in range(1,21) }
+print(d)
+
+# 2 Convert a list of tuples into a dictionary. Example: [("a",1),("b",2),("c",3)]
+list_of_tuple=[("a",10),("b",20),("c",30)]
+d={v[0]:v[1] for v in list_of_tuple}
+print(d)
+
+# 3 Given a dictionary of salaries, increase each salary by 10%.
+d={"worker1":1000,"worker2":3000,"worker3":4000}
+new_d={k:int(v+v*10/100) for k ,v in d.items()}
+print(new_d)
+
+# 4 Create a dictionary of word → length for a full sentence.
+sentence=input("Enter a sentence: ")
+words=sentence.split()
+d={word:len(word) for word in words}
+print(d)
+
+# 5 From a dictionary of marks, filter out all students who scored 80 or above.
+d={"Riya":89,"Ruhi":78,"komal":92,"Tripti":79}
+new_d={k:v for k ,v in d.items()if v>=80}
+print(new_d)
+
+# 6 Given a list of numbers, create a dictionary where key = number and value = number of digits.
+l=[1,34,345,5666,20000]
+d={v:len(str(v))for v in l}
+print(d)
+
+#7. Convert Celsius values in a list to Fahrenheit using comprehension.
+tem=(30,40,70,80)
+new_tem={v:int((v*9/5)+32) for v in tem}
+print(new_tem)
+
+#8. Given a dictionary of name → age, create a dictionary of only adults (age ≥ 18).
+details={"Riya":34,"sid":24,"Ruchi":18,"Mahesh":25,"tripti":8}
+new_details={k:v for k,v in details.items()if v>=18}
+print(new_details)
+
+#9. Count how many times each vowel appears in a full sentence.
+sentence=input("Enter a sentence:")
+vowel="aeiou"
+d={v:sentence.count(v) for v in vowel if v in sentence}
+print(d)
+
+#10. From a list of names, create a dictionary of name → first letter.
+l=["Mahesh","Ruchi","Piya","Komal"]
+d={v:v[0] for v in l}
+print(d)
+
+# -------- LEVEL 2 — HARD --------
+
+# 11 Reverse a dictionary but if multiple keys have same value, group them into lists.
+#    Example: {"a":1,"b":2,"c":1} → {1:["a","c"],2:["b"]}
+d={"a":1,"b":2,"c":1,"d":4,"c":2}
+new_d={}
+for k,v in d.items():
+    new_d.setdefault(v,[]).append(k)
+print(new_d)
+    
+#12. Extract only items where both key and value are even numbers.
+d={2:4,3:4,4:6}
+new_d={k:v for k,v in d.items()if k%2==0 and v%2==0}
+print(new_d)
+
+# 13 Create a dictionary mapping each word → frequency, ignoring case & punctuation.
+sentense="SHE ,SHE and she  is Happy!"
+sentense=sentense.lower()
+sentense=sentense.replace("!","")
+sentense=sentense.replace(",","")
+words=sentense.split()
+d={word:sentense.count(word) for word in words}
+print(d)
+
+# 14 Given a dictionary of populations, find the top 3 largest using comprehension + sorting.
+d={"India":144,"USA":33,"China":140,"Russia":100}
+sorted_items = sorted(d.items(), key=lambda x: x[1], reverse=True)
+new_d=dict(sorted_items[:3])
+print(new_d)
+
+# 15 Create a dictionary where key = number (1–20), value = number of divisors.
+d={n:sum(1 for i in range(1,n+1)if n%i==0)for n in range(1,20)}
+print(d)
+
+# 16 Create dictionary of character → ASCII value but only for alphabets.
+import string
+d={ch:ord(ch) for ch in string.ascii_letters}
+print(d)
+
+# 17 From a list of numbers, create {"even":[...], "odd":[...]}.
+n=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+d={"even":[i for i in n if i%2==0],
+   "odd":[i for i in n if i%2!=0]}
+print(d)
+
+# 18 Convert a nested list into a dictionary of index → list_sum.
+#    Example: [[1,2,3],[4,5,6],[7,8]] → {0:6,1:15,2:15}
+l=[[2,3],[4,1,5],[3,4,2,6]]
+d={l.index(i):sum(l[l.index(i)]) for i in l}
+print(d)
+
+# 19 Given a list of strings, create dictionary → string : number of vowels.
+words=["hello","miow","bow"]
+vowel="aeiou"
+d={word:sum(1 for ch in word if ch in vowel) for word in words }
+print(d)
+# 20 Invert a dictionary but ensure the result is sorted by keys.
+d = {"a": 3, "b": 1, "c": 2}
+d_1={v:k for k,v in d.items()}
+new_d=dict(sorted((d_1.items())))
+print(new_d)
