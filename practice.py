@@ -166,6 +166,7 @@ menu={"pizza":3,
       "potato Chips":6}
 total=0
 cart=[]
+prices=[]
 print("----------MENU----------")
 for k,v in menu.items():
     print(f"{k:13}:${v:.2f}")
@@ -174,14 +175,17 @@ while True:
     food=input("Enter the food items(q to stop): ").lower()
     if food=="q":
         break
-    elif menu.get(food) is not None:
+    elif food in menu:
         cart.append(food)
+    else:
+        print(f"{food} is not in the menu.")
 
 print("-------YOUR ORDER ---------")
 
 for food in cart:
-    total+=menu.get(food)
-    print(food,end=" ")
+    price=menu[food]
+    total+=price
+    print(f"{food:13}:${price:.2f}")
 print()
 
 print(f"Your total bill: ${total:.2f}")
