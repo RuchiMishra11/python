@@ -154,3 +154,35 @@ print()
 
 your_score=int(score/len(questions)*100)
 print(f"You have scored {your_score}%")
+
+# Concession stand program
+menu={"pizza":3,
+      "popcorn":8,
+      "soda":4,
+      "coke":4,
+      "burger":5,
+      "lemonade":3,
+      "nachos":5,
+      "potato Chips":6}
+total=0
+cart=[]
+print("----------MENU----------")
+for k,v in menu.items():
+    print(f"{k:13}:${v:.2f}")
+print("-------------------------")
+while True:
+    food=input("Enter the food items(q to stop): ").lower()
+    if food=="q":
+        break
+    elif menu.get(food) is not None:
+        cart.append(food)
+
+print("-------YOUR ORDER ---------")
+
+for food in cart:
+    total+=menu.get(food)
+    print(food,end=" ")
+print()
+
+print(f"Your total bill: ${total:.2f}")
+print("-------------------------")
