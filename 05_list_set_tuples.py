@@ -37,8 +37,14 @@ print(fruits) #["apple","banana","graps","orange","pineapple","watermelon"]
 "clear(): clear every items of list"
 fruits.clear()
 print(fruits)  #[]
-
-#PRACTICE PROBLEM
+"del function : delete a element of list "
+b=[1,2,3,4,5]
+del b[4]        
+print(b) #[1,2,3,4]
+"updating an element of  list "
+b=[1,2,3,4,5]
+b[3]=9
+print(b) #[1,2,3,9,5]
 #1. Take 5 numbers from user → store in list → print the list
 #using while loop
 a=[]
@@ -129,7 +135,7 @@ for i in range(b):
             a[j],a[j+1]=a[j+1],a[j]
 print(a)
 
-#   Set   = {} unordered and immutable, but Add/Remove OK. NO duplicates
+#   Set   = {} unordered and mutable, but Add/Remove OK. NO duplicates
 set={1,2,3}
 "add():add a new element to the set"
 set.add(4)

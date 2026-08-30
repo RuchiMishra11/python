@@ -63,3 +63,9 @@ x=3
 y=3.0
 x=x/y
 print (x)
+
+x=12
+y=3
+x=x/y
+x=int(x)
+print (x)

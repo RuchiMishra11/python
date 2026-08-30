@@ -52,7 +52,7 @@ Print the result in a neat sentence."""
 name=input("Enter your name :")
 age=int(input("Enter your age:"))
 weight=float(input("Enter your body weight:"))
-height=float(input("Enter your height:"))
+height=float(input("Enter your height (m):"))
 height_square=height*height
 bmi=weight/height_square
 print(f" hello {name}! i hope you are doing well! your bmi as per the data you have entered is {bmi}")

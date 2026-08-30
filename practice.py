@@ -190,3 +190,49 @@ print()
 
 print(f"Your total bill: ${total:.2f}")
 print("-------------------------")
+
+
+#library membership program
+library_member={"Rahul", "Priya", "Aman", "Neha"}
+print("""====== Library Membership ======
+
+1. Show all members
+2. Add a new member
+3. Remove a member
+4. Check if a member exists
+5. Exit""")
+permission=input("Enter do you wanna contine?(yes/no): ")
+
+while permission=="yes":
+    print("continuing...")
+    task=input("Enter which task you wanna do from above list: ")
+    if task=="1":
+        print(library_member)
+    elif task=="2":
+        name=input("Enter the name of new member: ")
+        if name not in library_member:
+            library_member.add(name)
+            print("Added!")
+        else:
+            print("Already exist as member.")
+    elif task=="3":
+        name=input("Enter name you wanna remove: ")
+        if name in library_member:
+            library_member.discard(name)
+            print("Removed successfully!")
+        else:
+            print("Member is not found!")
+    elif task=="4":
+        name =input("Enter name you wanna search:")
+        if name in library_member:
+            print("Member exists!")
+        else:
+            print("Member does not exist.")
+    elif task=="5":
+        print("Exit!")
+        break
+    else:
+        print("This task is not found in our system!")
+    permission=input("Enter do you wanna contine?(yes/no): ")
+else:
+    print("Existing...")

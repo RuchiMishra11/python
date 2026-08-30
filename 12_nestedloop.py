@@ -11,7 +11,6 @@ for i in range(1,4):
 row=int(input("Enter the number of rows:"))
 columns=int(input("Enter the number of columns: "))
 symbole=input("Enter the symbole you wanna use: ")
-
 for y in range(row):
     for x in range(columns):
         print(symbole, end="")
@@ -45,7 +44,7 @@ for x in range(1,5):
 #0 1 2
 #0 1 2
 #0 1 2
-for x in range(2):
+for x in range(3):
     for y in range(3):
         print(y,end=" ")
     print()
@@ -56,6 +55,11 @@ for x in range(1,11):
         print(x*y , end=" ")
     print()
 
+"ALTERNATE METHOD WITH FORMATING"
+for i in range(1,11):
+    for j in range(1,6):
+        print(f"{i*j:4}",end=" ")
+    print()
 # level:2 Medium
 
 #6. Print a table of coordinates (i, j)
@@ -125,11 +129,10 @@ The second digit is odd
 The sum of digits is less than 10"""
 for x in range(1,10):
     for y in range(0,10):
-        if y%2==0 and x%2!=0 and y+x<10:
-            print(x,y,end="")
-print(x)
-
-
+        if x%2==0 and  y%2!=0 and (x+y)<10:
+            number=x*10+y
+            print(number,end=" ")
+print()
 #while - while nested loop 
 
 # 1. Print all pairs (i, j)
@@ -282,7 +285,7 @@ while i<=5:
             print(f"{i}{j}", end=" ")
         j+=1
     print()
-    i+=1
+    i+=1  
 
 # 8. Print a number triangle
 """For example:
@@ -435,7 +438,7 @@ for i in range(1,6):
 
 #using while while nested loop:
 found=False
-i=1
+i=1    
 while i<=5:
     j=1
     while j<=5:

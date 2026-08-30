@@ -63,9 +63,12 @@ print(f"Price1 is ${price1:,}")
 print(f"Price2 is ${price2:,}")
 print(f"Price3 is ${price3:,}")
 
-
-
-
+score=0.8993
+print(f"The score is {score:.2%}")
+price=345
+print(f"The price is ${price:x} in hexadecimal.")
+print(f"The price is ${price:o} in octal .")
+print(f"The price is ${price:b} in binary")
 
 
 

@@ -170,7 +170,7 @@ percentage=marks_scored/total*100
 print(f"Your scored {percentage}% in your exam.")
 
 
-#STRING METHOD
+#STRING METHOD  [function  we can use for string]
 
 greet="hello world"
 phone_number="78-456-432"
@@ -207,6 +207,40 @@ greet=greet.replace("hello","hey")
 print(greet)
 phone_number=phone_number.replace("-"," ")
 print(phone_number)
+
+greeting="  Hello world   "
+greeting.strip() #remove uneccessary spaces from both end of the string   , will print:"Hello world"
+print(greeting)
+greeting.lstrip() #remove spaces from left  , will print:"Hello world  "
+greeting.rstrip() #remove spaces from right  will print : "  Hello world"
+greeting.title() # will print : "Hello World"
+greeting.swapcase() # will print : "hELLO wORLD"
+#.endwith(x)/.startwith(x) :use to check the file type  eg:
+"To check proper website ,document type etc"
+website="https://www.youtube.com/"
+print(website.endswith(".com/")) #True
+print(website.startswith("https://")) #True
+password="123miowmiowABC"
+print(password.endswith("ABC"))# True
+print(password.startswith("123")) #True
+print(password.endswith("3434"))#False
+print(password.startswith('ade') )#False
+#islower() and isupper() : to check the case of  letter 
+a="MIOW"
+b="bow"
+print(a.isupper()) #True
+print(a.islower()) #False
+print(b.isupper()) #False
+print(b.islower()) #True
+#isspace() : wheck whether the whole string  contain only spaces or not 
+"   ".isspace()   # True
+"".isspace()      # False — empty string is NOT considered "all whitespace"
+" a ".isspace()   # False — has a non-space character
+#zfill(n) : Pads a string with leading zeros until it reaches length n.
+print("7".zfill(3))
+print("67".zfill(4))
+
+
 #help function :
 # print(help(str)) # tell us in DETAIL about each mthod we can use for the string 
 # print(dir(str)) # list all the method we can use on string simplarly we can do for other data type.
@@ -268,3 +302,98 @@ elif not any(ch.isdigit() for ch in password):
     print("Your password must contain a digit.")
 else:
     print("Valid password!")
+
+
+#1. bais combo 
+name=input("Enter your name: ")
+salary=int(input("Enter the salary: "))
+annual_income=salary*12
+print(f"{name} earn ${salary:,.2f} a month.That's make upto {annual_income:,.2f}")
+# 2. List + string methods
+"""Take a sentence as input. Split it into words, then print each word capitalized, one per line, along with its length. 
+Example: for "the quick fox", print something like The - 3 letters."""
+sentence=input("Enter a sentence: ")
+sentence=sentence.title()
+words=sentence.split()
+for word in words:
+    print(f"{word}→{len(word)}letters.")
+
+"""3. Set operations
+You have two lists of student names who attended Monday's class and Tuesday's class. 
+Using sets, find: students who attended both days, students who attended only Monday,
+ and students who attended either day but not both."""
+mon_lec=["ria","sia","zack","hennah"]
+tue_lec=["tia","ria","hennah","biu","joe","tac"]
+a=set(mon_lec)
+b=set(tue_lec)
+print(f"""==========Student Attendance==========
+Student who attended both day    :{a.intersection(b)}
+Student who attended only monday :{a.difference(b)}
+Student who attended attended either but not both :{a.symmetric_difference(b)}""")
+
+"""4. Nested loop + condition — no string multiplication
+Print a diamond pattern (pyramid + upside-down pyramid combined) for a given number of rows, 
+without using * string multiplication (i.e., use loops for spaces and stars, like your earlier pyramid)."""
+row=5
+for i in range(1,row+1):
+    for j in range(row-i):
+        print(" ",end="")
+    for k in range(2*i-1):
+        print("-",end="")
+    print()
+for i in reversed(range(1,row+1)):
+    for j in range(row-i):
+        print(" ",end="")
+    for k in range(2*i-1):
+        print("-",end="")
+    print()
+
+"""5. While loop + logical operators
+Write a simple number-guessing game: pick a fixed secret number, let the user keep guessing with input() 
+in a while loop, and print "Too high", "Too low", or "Correct!" each time, stopping the loop when they get it right. 
+Also count and print how many attempts it took."""
+num =int(input("Enter the number: "))
+i=1
+while num!=7:
+    if 8<= num <=10:
+        print("close!")
+    elif 11<= num <=20:
+        print("High!")
+    elif num>20:
+        print("too high!")
+    elif 6<= num >=5:
+        print("close!")
+    elif 5> num >=1:
+        print("low!")
+    elif num<1:
+        print("too low!")
+
+    num=int(input("Enter the number: "))
+    i+=1
+print(f"The attempt u took the guess correct is {i}")
+
+"""6. Tuple + indexing/slicing
+Given a tuple of 10 numbers, print: the first 3 numbers, the last 3 numbers,
+ every 2nd number, and the tuple reversed — all using slicing (no loops)."""
+a=(5,15,25,35,45,55,65,75,85,95)
+print(a[:3])
+print(a[-3:])
+print(a[::2])
+print(a[::-1])
+
+"""7. Combine everything — FizzBuzz variant
+Loop from 1 to 50. For multiples of 3, print "Fizz"; multiples of 5, 
+print "Buzz"; multiples of both, print "FizzBuzz"; otherwise print the number. Then, 
+separately, store all the "FizzBuzz" numbers in a list and print that list at the end."""
+fizzbuzz_no=[]
+for i in range(1,51):
+    if i%3==0 and i%5==0:
+        print(f"{i}→FizzBuzz",end=", ")
+        fizzbuzz_no.append(i)
+    elif i%5==0:
+        print(f"{i}→Buzz",end=", ")
+    elif i%3==0 :
+        print(f"{i}→Fizz",end=", ")
+        
+
+print(f"FizzBuzz Numbers are :{fizzbuzz_no}")

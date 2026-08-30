@@ -37,8 +37,6 @@ else:
 a_teacher=False
 if a_teacher:
     print("You are a teacher!")
-elif a_teacher=="no":
-    print("you are not teacher")
 else:
     print("Are you a student?")
 
@@ -110,3 +108,15 @@ print("Pass"if marks>=35 else "Fail")
 #practice problem 2: printing absolute of a number
 num=int(input("Enter your number:"))
 print(-num if num<0 else num)
+
+"PRIME OR NOT  USING IF/ELSE AND FOR LOOP "
+num=int(input("Enter the number: "))
+if num<=0:
+    print(f"{num} is not prime")
+else:
+    for i in range(2,num):
+        if num%i==0:
+            print(f"{num} is not prime.")
+            break
+    else:
+        print(f"{num} is prime.")

@@ -2,13 +2,13 @@
 friends=10
 # friends = friends + 1
 # friends += 1
-# friends = friends 2
+# friends = friends - 2
 # friends -= 2
 # friends = friends * 3
 # friends *= 3
 # friends = friends / 2
 # friends /= 2
-# friends = friends 2
+# friends = friends**2
 # friends **= 2
 remainder = friends % 2 #we can use this to check whether a number is even or odd
 print(remainder)        #  when the number is even we get 0 when we find number %2 when odd we get 1  
@@ -21,7 +21,7 @@ money-=1
 print(money)  #2
 money*=3 
 print(money)  #6
-money/=2 
+money/=2  
 print(money)  #3
 money%=3 
 print(money)  #0
@@ -65,7 +65,7 @@ print(f"Circumfrence of the circle with radius {radius}cm is {round(circumfrence
 # practice problem 2: calculate the area of circle 
 radius=float(input("Enter the radius of the circle:"))
 area= math.pi * pow(radius,2)
-print(f"Area of the circle with radius {radius}cm is {round(area,2)}cm²")
+print(f"Area of the circle with radius {radius}cm is {round(area,2)}m²")
   
 #practice problem 3:find the hypoteneous of a right angle triangle 
 height=int(input("Enter the height of  right angled triangle:"))

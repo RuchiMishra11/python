@@ -26,14 +26,14 @@ for x in credit_card[::3]:
      print(x)
 print("done")
 #eg:5
-for x in (1,11):
+for x in range(1,21):
      if x==13:
           continue
      else:
           print(x)
 
 #eg:6
-for x in (1,11):
+for x in range(1,21):
      if x==13:
           break
      else:
@@ -159,7 +159,19 @@ total=1
 for x in   range(1,n+1):
     total*=x
 print(f"{n}!={total}")
-    
+
+"""Ask the user for a number n.
+Use a for loop to calculate its factorial (from 0 to n!)."""
+n=int(input("Enter a number:"))
+
+for i in range (n+1):
+     total=1
+     for x in   range(1,i+1):
+          total*=x
+     print(f"{i}!={total}")
+     
+print("Done")
+
 # Problem 5: Multiplication Table
 """Ask the user for a number n.
 Print its multiplication table up to 10."""
@@ -207,7 +219,7 @@ for x in range(n):
     if num>0:
         positive_num+=1
     elif num<0:
-        negative_num-=1
+        negative_num+=1
 print(f"Number og positive number and negative number you have entered is {positive_num} and {negative_num} respectively.")
     
 
