@@ -155,41 +155,39 @@ print()
 your_score=int(score/len(questions)*100)
 print(f"You have scored {your_score}%")
 
-# Concession stand program
-menu={"pizza":3,
-      "popcorn":8,
-      "soda":4,
-      "coke":4,
-      "burger":5,
-      "lemonade":3,
-      "nachos":5,
-      "potato Chips":6}
+# Food stall program
+manu={"pizza":299,
+      "burger":250,
+      "coke":150,
+      "ice-Cream":120,
+      "soda":90,
+      "fries":150,
+      "cup-cake":160,
+      "cold-coffee":99}
 total=0
 cart=[]
-prices=[]
-print("----------MENU----------")
-for k,v in menu.items():
-    print(f"{k:13}:${v:.2f}")
-print("-------------------------")
+#printing cart
+print("Wellcome to our food stall!")
+print("This is our Manu!")
+print("------- MANU -------")
+for items ,price in manu.items():
+    print(f"{items.capitalize():12}:Rs.{price}")
+print("-------------------")
+# taking order
 while True:
-    food=input("Enter the food items(q to stop): ").lower()
-    if food=="q":
+    item=input("Enter the food you would like to order from the manu (q to stop):").lower()
+    if item=="q":
+        print("Exiting..")
         break
-    elif food in menu:
-        cart.append(food)
-    else:
-        print(f"{food} is not in the menu.")
-
-print("-------YOUR ORDER ---------")
-
-for food in cart:
-    price=menu[food]
-    total+=price
-    print(f"{food:13}:${price:.2f}")
-print()
-
-print(f"Your total bill: ${total:.2f}")
-print("-------------------------")
+    elif manu.get(item)!=None:
+        cart.append(item)
+print("----- Your orders -----")
+for item in cart:
+    total+=manu.get(item)
+    print(f"{item.capitalize():12}:Rs.{manu.get(item)}")
+print(f"{"Total":12}:Rs.{total}")
+print("Thanks for the orders!")
+    
 
 
 #library membership program
