@@ -273,6 +273,7 @@ while True:
      else:
           break
      password=input("Enter your password:")
+print("Password accepted!")
 print("wellcome!")
 
 # Problem 5: Sum of Positive Numbers
