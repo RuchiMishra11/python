@@ -113,6 +113,24 @@ names = ['Ravi', 'Sam', 'Tia', 'Zoe', 'Om']
 winners = random.sample(names, 3)
 print('Winners:', winners)
 
+#STRING MODULE
+import string 
+
+import string 
+
+print(string.ascii_lowercase)# 'abcdefghijklmnopqrstuvwxyz'
+print(string.ascii_uppercase) # 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+print(string.ascii_letters) # will print above two combined
+print(string.punctuation) # will print All common symbols/punctuation
+print(string.digits) #'0123456789'
+print(string.capwords("The   box is   Empty.")) #Capitalizes each word, normalizes spacing unlike litle() which only capitalize not normalize spacing.
+print("The   box is   Empty.".title())  #difference from title function 
+print(repr(string.whitespace)) # '\t\n\r\x0b\x0c ' (all space/newline/tab characters)
+print(string.hexdigits)        # '0123456789abcdefABCDEF'
+print(string.octdigits)        # '0123456'
+
+
+
 import random
 import time
 #Number guessing program 
@@ -225,5 +243,30 @@ for line in  range(5):
 for die in dice:
     total+=die
 print(f'Total : {total}')
+
+#Encryption program in python 
+import string
+import random
+character=" "+string.ascii_letters + string.digits + string.punctuation
+character=list(character)
+key=character.copy()
+random.shuffle(key)
+message=input("Enter your message:")
+encrypted_message=""
+for letter in message:
+    index=character.index(letter)
+    encrypted_message+=key[index]
+print(f"Original message:{message}")
+print(f"Encrypted message:{encrypted_message}")
+
+#Decryption in python (Decoding original text)
+
+message=""
+encrypted_message=input("Enter encrypted message:")
+for char in encrypted_message:
+    index=key.index(char)
+    message+=character[index]
+print(f"Encrypted message:{encrypted_message}")
+print(f"Original message:{message}")
 
 
