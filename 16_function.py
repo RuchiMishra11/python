@@ -1,3 +1,6 @@
+#Calling Function  def function_name(arg1,arg2) here arg1 and arg2 are arguments 
+#Postional argument (x,y)
+
 def add(x,y):
      z=x+y
      return z
@@ -67,13 +70,39 @@ def invoice(username, amount, currency="Rs"):
     pass
 
 import time
-import os
-def count(end , start=0):
-     for x in range(start,end+1):
-          os.system("cls")
+def count(end , start=0):  #here start  value is set to be 0 and when we are calling function
+                           # we don't neccessary have to give start argument but if we want something other as starting point we can give .
+     for x in range(start,end+1): 
           print(x)
           time.sleep(1)
+     print("Done!")
+   
 
-end=int(input("Enter the count:"))
-print(count(end))
+
+end=int(input("Enter the count:")) 
+count(end) #without any starting argument it will start from 0 cuz it's default value
+count(end,1)#here starting  value is set to be  1 
+
+#KEYWORD ARGUMENT  
+"""keyword arguments = arguments prefixed with the names of parameters
+order of the arguments doesn't matter
+helps with readability
+"""
+
+def greet(greeting,title,firstname, lastname):
+     print(f"{greeting.capitalize()}, {title.capitalize()}.{firstname.capitalize()} {lastname.capitalize()}")
+greet("hello",title="mr",firstname="jame",lastname="john") #Hello, Mr.Jame John
+greet("hello",firstname="jame", title="mr",lastname="john") #Hello, Mr.Jame John (will print the same order doen't matter when we use keyword argument)
+#Note
+# greet(lastname="john",title="mr",firstname="jame","hello")  #give syntax error cuz positional argument always come before keyword argument
+
+#Built in keyword argument of print() function in python 
+sep="some value"
+print("1","2","3","4",sep="-")
+print("a","b","c","d", sep="-") # it control what's between multiple string 
+end=" " #a keyword argument of print() function
+print("Hello",end=",")
+print("Your work is done!")
+
+print("a","b","c","d", end="-") # it decides what come after we finish print statement
 
