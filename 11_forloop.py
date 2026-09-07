@@ -357,3 +357,32 @@ count=""
 for x in  n: 
     count+=x 
     print(count)
+
+#MEMBERSHIP AND LIST COMPREHENSION PROGRAMS
+# **1. Filtering with membership — clean a guest list**
+all_names = ["Ravi", "Sam", "Tia", "Om", "Zoe", "Kabir"]
+blocked = {"Sam", "Om"}
+new_guest=[name for name in all_names if name not in blocked]
+print(new_guest)
+# **2. Transform + filter combined — password-safe usernames**
+usernames = ["ravi123", "sam", "tia_the_great", "x", "kabir2024"]
+valid_username=[username for username in usernames if len(username)>=5]
+print(valid_username)
+# **3. Membership across two lists — find common items**
+cart_today = ["apple", "bread", "milk", "eggs"]
+cart_yesterday = ["bread", "eggs", "butter", "juice"]
+both_day=[item for item in cart_today if item in cart_yesterday]
+print(both_day)
+
+# **4. Nested condition with membership — vowel-starting words only**
+words = ["apple", "banana", "orange", "kiwi", "elephant", "grape"]
+vowels="aeiou"
+l=[word for word in words if word[0] in vowels]
+print(l)
+
+# **5. Real-world validation — flagging invalid entries**
+user_ages = [15, 22, "unknown", 30, -5, 45,240]
+new_ages=[age for age in user_ages if isinstance(age,int) and 0<age<=120]
+print(new_ages)
+
+    
