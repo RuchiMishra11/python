@@ -120,3 +120,24 @@ else:
             break
     else:
         print(f"{num} is prime.")
+
+
+#MATCH CASE 
+day=input("Enter the day:").lower()
+match day:
+    case "sunday"|"saturday":
+        print("It's weekend")
+    case "monday"|"tuesday"|"wednesday"|"thursday"|"friday":
+        print("It's not weekend")
+    case _ :
+        print("It's not a valid day!")
+
+#also we can use match case inside a  function 
+def is_weekend(day):
+    match day:
+     case "sunday"|"saturday":
+        return "It's weekend"
+     case "monday"|"tuesday"|"wednesday"|"thursday"|"friday":
+        return "It's not weekend"
+     case _ :
+        return "It's not a valid day!"
